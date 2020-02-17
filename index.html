@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataVis Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body style="margin: 0;">
+    <div class="header">
+      <div class="btns">
+        <button id="line">Line</button>
+        <button id="rect">Rectangle</button>
+        <button id="circle">Circle</button>
+        <button id="clock">Clock</button>
+        <button id="erase">Erase</button>
+      </div>
+    </div>
+    <canvas id="canvas" style="border: 1px solid green;"></canvas>
+
+    <script type="module" crossorigin src="./utils.js"></script>
+    <script type="module" crossorigin src="./shapes.js"></script>
+    <script type="module" crossorigin src="app.js"></script>
+  </body>
+</html>
