@@ -11,11 +11,15 @@ import {
 import { eraseAll } from './utils.js';
 
 // Constants
-const HEADER_HEIGHT = 50;
+const HEADER_HEIGHT = 150;
 
 // Init button listeners
+const currentShape = document.querySelector('.current-shape');
 document.querySelectorAll('button').forEach(btn => {
-  btn.addEventListener('click', e => (state.shape = btn.id));
+  btn.addEventListener('click', e => {
+    state.shape = btn.id;
+    currentShape.textContent = 'Current Shape: ' + btn.id;
+  });
 });
 
 // Init Canvas

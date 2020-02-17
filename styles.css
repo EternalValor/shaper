@@ -1,3 +1,45 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .header {
-  height: 50px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.ucd-logo {
+  margin-right: 30px;
+}
+
+.header__info {
+  margin-right: 60px;
+}
+
+.header__heading {
+  font-size: 30px;
+  margin: 0;
+}
+
+.header__sub-heading {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+}
+
+.header__name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+button {
+  background-color: #266fdd;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 12px 24px;
+  margin-right: 10px;
+  margin-bottom: 15px;
 }
