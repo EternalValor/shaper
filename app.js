@@ -176,7 +176,6 @@ setInterval(() => {
 }, 1000);
 
 canvas.addEventListener('mousedown', e => {
-  console.log(e);
   state.end = null;
   state.start = {
     x: e.pageX,
@@ -200,7 +199,6 @@ canvas.addEventListener('mouseup', e => {
 });
 
 canvas.addEventListener('mousemove', e => {
-  console.log(state.shape);
   if (state.btnDown) {
     state.end = {
       x: e.pageX,

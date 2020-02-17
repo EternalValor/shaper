@@ -11,12 +11,6 @@ import { ctx, imgData } from './app.js';
  * @param {Boolen} erase - Whether or not to erase the given line
  */
 export function drawBLine(x0, y0, x1, y1, erase = false) {
-  console.log(erase ? 'drawing ' : 'erasing ', {
-    x0,
-    y0,
-    x1,
-    y1
-  });
   let x, y;
   const dx = Math.abs(x1 - x0);
   const incX = x1 > x0 ? 1 : -1;
@@ -133,12 +127,6 @@ export function undoRect(x0, y0, x1, y1) {
  * @param {Number} y1 - y coordinate of the end point
  */
 export function bCircle(x0, y0, x1, y1, erase = false) {
-  console.log(erase ? 'drawing ' : 'erasing ', {
-    x0,
-    y0,
-    x1,
-    y1
-  });
   const r = Math.sqrt(Math.pow(x1 - x0, 2) + Math.pow(y1 - y0, 2));
   let x = 0;
   let y = Math.floor(r);
@@ -228,11 +216,12 @@ export function drawClock(x0, y0, x1, y1, time, erase = false) {
   };
   const hours = {
     length: Math.floor(r * 0.55),
-    rotation: Math.floor(
-      (((time / 1000 / 60 / 60) % 12) + 1 - 12) * (Math.PI / 6)
-    )
+    rotation: Math.floor(((time / 1000 / 60 / 60) % 12) + 1) * (Math.PI / 6)
   };
-  console.log('hours ', ((time / 1000 / 60 / 60) % 12) + 1 - 12);
+  console.log(
+    'hours ',
+    Math.floor(((time / 1000 / 60 / 60) % 12) + 1) * (Math.PI / 6)
+  );
 
   // Get seconds, minutes and hours end point
   let l = y0 - seconds.length;
