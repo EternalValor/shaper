@@ -10,6 +10,6 @@ After installing npm, navigate to the repo directory and execute the following c
 
 ## Usage
 
-Make sure your port 4000 isn't in use and run the following command:
+Make sure port 4000 isn't in use and run the following command:
 `$ npm start`
-Then navigate to `localhost:4000` in you browser to view the app
+Then navigate to `localhost:4000` in your browser to view the app
